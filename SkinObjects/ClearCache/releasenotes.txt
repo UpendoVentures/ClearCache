@@ -1,0 +1,15 @@
+<style>
+	.uvReleaseNotes h2 { margin-bottom: 0.25em; }
+	.uvReleaseNotes ul { margin-left: 0.5em; }
+	.uvReleaseNotes ul li { margin-left: 0.5em; }
+</style>
+<div class="uvReleaseNotes">
+	<h2>ClearCache SkinObjects Extension for DNN</h2>
+	<p>Version 01.00.00</p>
+	<ul>
+		<li>First release.</li>
+		<li>Built for DNN 09.02.01 or newer.</li>
+		<li>Allows administrators to clear the cache on the website with a single click.</li>
+		<li>Allows administrators and superusers to restart the application with a single click.</li>
+	</ul>
+</div>

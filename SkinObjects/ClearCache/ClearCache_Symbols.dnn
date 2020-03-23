@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dotnetnuke type="Package" version="6.0">
+  <packages>
+    <package name="Upendo.SkinObjects.ClearCache_Symbols" type="Library" version="01.00.00">
+      <friendlyName>ClearCache Skin Object Symbols</friendlyName>
+      <description><![CDATA[Allows an authorized visitor to clear the cache with a single click. (Useful for developers.)]]></description>
+      <iconFile>~/DesktopModules/ClearCache/Images/logo.png</iconFile>
+      <owner>
+        <name>Will Strohl</name>
+        <organization>Upendo</organization>
+        <url>https://upendoventures.com</url>
+        <email>solutions@upendoventures.com</email>
+      </owner>
+      <license src="License.txt" />
+      <releaseNotes src="ReleaseNotes.txt" />
+      <azureCompatible>True</azureCompatible>
+      <dependencies>
+        <dependency type="managedPackage" version="1.0.0">Upendo.SkinObjects.ClearCache</dependency>
+      </dependencies>
+
+      <components>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath></basePath>
+            <resourceFile>
+              <name>Resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>
