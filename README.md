@@ -1,13 +1,45 @@
 **A Special Note to ALL Developers...**  
 Please do not begin any development until you first read through and understand all of the notes in the README below.  
 
+# ClearCache Skin Object  
+
+This skin object allows you to add functionality to the theme in DNN which helps developers quickly clear cache or restart the application pool without ever leaving the page.  
+
+## Usage  
+
+Add the following lines of code to your theme layout(s) and restyle as you see fit.  
+
+```aspx  
+<%@ Register TagPrefix="upendo" TagName="clearcache" Src="~/DesktopModules/ClearCache/View.ascx" %>  
+
+<upendo:clearcache runat="server" />  
+```  
+
+The page will output HTML similar to the following that a designer may want to restyle if they choose to (note the extra CSS class names added for selectors).  
+
+```html  
+<div class="text-center clearfix">
+    <div class="dnnClear uvAdminControls">
+        <a id="dnn_ctl00_btnClearCache" class="dnnPrimaryAction uvPrimaryAction" href="javascript:__doPostBack('dnn$ctl00$btnClearCache','')">Clear Cache</a> 
+        <a id="dnn_ctl00_btnRestartApp" class="dnnSecondaryAction uvSecondaryAction" href="javascript:__doPostBack('dnn$ctl00$btnRestartApp','')">Restart Application</a> 
+    </div>
+</div>
+```  
+
+Clicking the `Clear Cache` button will follow the same logic when clicking the button found in the Persona Bar: Servers > Clear Cache button.  This is available to administrators and superusers.  
+
+Clicking the `Restart Application` button will follow the same logic when clicking the button found in the Persona Bar: Servers > Restart Application button.  You will first need to confirm this action.  Also, this will only appear if you're logged in as a superuser.  
+
+
+# Source Code Details
+
 ## Background  
 The previous version was not adhering to known best practices and as a result, it was unclear of how to find and maintain it. This version has been cleaned up and restructured with best practice architecture, build, versioning, and deployment in mind.  
 
 ## Solution  
 The solution currently expects to be in the following environment, but you can update that to be any version you'd like, provided all extensions will be compatible:  
 
-- DNN:  09.01.01  
+- DNN:  09.02.01  
 - Hotcakes Commerce:  03.02.01  
 - SQL:  2012  
 
