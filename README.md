@@ -28,6 +28,25 @@ Clicking the `Clear Cache` button will follow the same logic when clicking the b
 
 Clicking the `Restart Application` button will follow the same logic when clicking the button found in the Persona Bar: Servers > Restart Application button.  You will first need to confirm this action.  Also, this will only appear if you're logged in as a superuser.  
 
+## Debugging  
+
+If you turn on debugging in the Log4Net configuration file, you'll see when a clear cache event or restart application event occurs.  
+
+When clearing the cache, the following will be appended to your Log4Net event log file.  
+
+```
+2020-03-23 12:15:05.049-07:00 [YOUR-COMPUTER-NAME][D:8][T:43][DEBUG] Upendo.SkinObjects.ClearCache.Components.ClearCacheModuleBase - Attempting to clear the cache.  
+2020-03-23 12:15:05.120-07:00 [YOUR-COMPUTER-NAME][D:8][T:43][DEBUG] Upendo.SkinObjects.ClearCache.Components.ClearCacheModuleBase - Cleared the cache.  
+```  
+
+When restarting the application, the following will be appended to your Log4Net event log file.  
+
+```  
+2020-03-23 12:20:39.607-07:00 [YOUR-COMPUTER-NAME][D:8][T:42][DEBUG] Upendo.SkinObjects.ClearCache.Components.ClearCacheModuleBase - Attempting to restart the application pool.  
+```  
+
+If for some reason an exception occurs, that will be logged both in the Log4Net event log file and the standard DNN event log/viewer.  
+
 # Source Code Details
 
 ## Background  
