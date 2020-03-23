@@ -18,18 +18,15 @@ Add the following lines of code to your theme layout(s) and restyle as you see f
 The page will output HTML similar to the following that a designer may want to restyle if they choose to (note the extra CSS class names added for selectors).  
 
 ```html  
-<div class="text-center clearfix">
-    <div class="dnnClear uvAdminControls">
-        <a id="dnn_ctl00_btnClearCache" class="dnnPrimaryAction uvPrimaryAction" href="javascript:__doPostBack('dnn$ctl00$btnClearCache','')">Clear Cache</a> 
-        <a id="dnn_ctl00_btnRestartApp" class="dnnSecondaryAction uvSecondaryAction" href="javascript:__doPostBack('dnn$ctl00$btnRestartApp','')">Restart Application</a> 
-    </div>
-</div>
+<div class="dnnClear uvAdminControls">  
+    <a id="dnn_ctl00_btnClearCache" class="dnnPrimaryAction uvPrimaryAction" href="javascript:__doPostBack('dnn$ctl00$btnClearCache','')">Clear Cache</a>  
+    <a id="dnn_ctl00_btnRestartApp" class="dnnSecondaryAction uvSecondaryAction" href="javascript:__doPostBack('dnn$ctl00$btnRestartApp','')">Restart Application</a>  
+</div>  
 ```  
 
 Clicking the `Clear Cache` button will follow the same logic when clicking the button found in the Persona Bar: Servers > Clear Cache button.  This is available to administrators and superusers.  
 
 Clicking the `Restart Application` button will follow the same logic when clicking the button found in the Persona Bar: Servers > Restart Application button.  You will first need to confirm this action.  Also, this will only appear if you're logged in as a superuser.  
-
 
 # Source Code Details
 
